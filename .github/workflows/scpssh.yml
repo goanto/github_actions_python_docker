@@ -19,5 +19,5 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
-        script: touch /home/root/hi.txt
+        script: touch /home/geoantony/hi
     
