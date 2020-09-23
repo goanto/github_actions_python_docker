@@ -9,9 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v1
-    
+    steps:    
     - name: ls -a via ssh
       uses: fifsky/ssh-action@master
       with:
@@ -20,5 +18,5 @@ jobs:
           ls -a
         host: ${{ secrets.HOST }}
         user: root
-        key: ${{ secrets.PRIVATE_KEY}}
+        key: ${{ secrets.PRIVATE_KEY }}
     
