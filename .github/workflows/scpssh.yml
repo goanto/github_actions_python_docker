@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:    
-    - name: ls -a via ssh
-      uses: fifsky/ssh-action@master
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
-        command: |
-          cd /tmp
-          ls -a
         host: ${{ secrets.HOST }}
-        user: root
-        key: ${{ secrets.PRIVATE_KEY }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
     
